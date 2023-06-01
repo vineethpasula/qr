@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 31);
+}
+
+.wrapper {
+    background: linear-gradient(45deg, #8915f6, #0cbcf2);
+    height: 260px;
+    max-width: 410px;
+    padding: 16px 25px;
+    border-radius: 15px;
+    transition: height 0.2s ease;
+    box-shadow: 0 15px 25px rgb(55, 9, 236);
+    ;
+}
+
+.wrapper.active {
+    height: 530px;
+}
+
+header h1 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #121213
+}
+
+header p {
+    margin-top: 5px;
+    color: #0e0e0e;
+    font-size: 16px;
+}
+
+.wrapper .form {
+    margin: 20px 0 30px;
+}
+
+.form :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form input {
+    font-size: 18px;
+    padding: 0 17px;
+    border-radius: 15px;
+    border: 1px solid #999;
+}
+
+.form button {
+    font-size: 17px;
+    color: #fffffe;
+    margin-top: 20px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #0ae6df, #1232e6);
+    cursor: pointer;
+}
+
+.form button:hover {
+    font-size: 17.5px;
+    color: #fffffe;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #1232e6, #0ae6df);
+    transition: 0.5s;
+}
+
+.wrapper .qr-code {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #02f8f8;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgb(55, 9, 236);
+}
+
+.wrapper .qr-code img {
+    width: 200px;
+    height: auto;
+}
+
+.wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
+}
